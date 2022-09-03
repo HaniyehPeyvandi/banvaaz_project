@@ -1,6 +1,17 @@
 /* Reset */
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --color-primary-light: #53b9d9;
+  --color-primary-dark: #0e5d80;
+  --color-secondary-light: #5BB1CC;
+  --color-body:#474747;
+  --color-white:#fff;
 }
