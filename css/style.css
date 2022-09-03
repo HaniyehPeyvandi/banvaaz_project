@@ -11,66 +11,68 @@
 :root {
   --color-primary-light: #53b9d9;
   --color-primary-dark: #0e5d80;
-  --color-secondary-light: #5BB1CC;
-  --color-body:#474747;
-  --color-white:#fff;
+  --color-secondary-light: #5bb1cc;
+  --color-body: #474747;
+  --color-white: #fff;
 }
 
 /* Typography */
-html{
+html {
   font-size: 62.5%;
 }
 
-body{
+body {
   color: var(--color-body);
   font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.6;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   font-weight: bold;
 }
 
-h1{
+h1 {
   font-size: 2.5rem;
 }
 
-h2{
+h2 {
   font-size: 2rem;
 }
 
 @media screen and (min-width: 1024px) {
-  body{
+  body {
     font-size: 1.8rem;
   }
-  h1{
+  h1 {
     font-size: 5.5rem;
   }
-  h2{
+  h2 {
     font-size: 3.5rem;
   }
 }
 
 /* Container */
-.container{
+.container {
   max-width: 1140px;
   margin: 0 auto;
 }
 
 /* Block */
-.block{
+.block {
   padding: 3rem 2rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .block{
+  .block {
     padding: 5rem 2rem;
   }
 }
 
 /* Buttons */
-.btn{
+.btn {
   cursor: pointer;
   border-radius: 10px;
   border: 0;
@@ -82,40 +84,91 @@ h2{
   font-size: 1.4rem;
 }
 
-@media screen and (min-width:1024px) {
-  .btn{
+@media screen and (min-width: 1024px) {
+  .btn {
     font-size: 1.6rem;
   }
 }
 
 /* Sensors */
-.sensors__items{
+.sensors__items {
   display: grid;
   gap: 2rem 0;
-  grid-template-columns: repeat(3,minmax(90px,150px));
+  grid-template-columns: repeat(3, minmax(90px, 150px));
   justify-content: center;
   align-content: center;
 }
 
-.sensors__item{
+.sensors__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.sensors__item p{
+.sensors__item p {
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: -2rem;
 }
 
-@media screen and (min-width:1024px) {
-  .sensors__items{
-    grid-template-columns: repeat(6,minmax(100px,150px));
+@media screen and (min-width: 1024px) {
+  .sensors__items {
+    grid-template-columns: repeat(6, minmax(100px, 150px));
   }
-  .sensors__item p{
+  .sensors__item p {
     font-size: 2rem;
     margin-top: -1.5rem;
+  }
+}
+
+/* Features */
+.features{
+  background-color: #7EDCF9;
+}
+
+.features h2{
+  color: var(--color-primary-dark);
+  padding: 0 1rem 3rem;
+}
+
+.features__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  padding: 1rem;
+}
+
+.feature__img img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.features__item .feature__text{
+  max-width: 255px;
+}
+
+@media screen and (max-width: 400px) {
+  .feature__text{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .features__items {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .features__item{
+    flex-basis: 25%;
+    padding: 1.5rem;
   }
 }
