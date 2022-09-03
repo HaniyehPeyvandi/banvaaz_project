@@ -52,6 +52,23 @@ h2{
   }
 }
 
+/* Container */
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Block */
+.block{
+  padding: 3rem 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .block{
+    padding: 5rem 2rem;
+  }
+}
+
 /* Buttons */
 .btn{
   cursor: pointer;
@@ -68,5 +85,37 @@ h2{
 @media screen and (min-width:1024px) {
   .btn{
     font-size: 1.6rem;
+  }
+}
+
+/* Sensors */
+.sensors__items{
+  display: grid;
+  gap: 2rem 0;
+  grid-template-columns: repeat(3,minmax(90px,150px));
+  justify-content: center;
+  align-content: center;
+}
+
+.sensors__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sensors__item p{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: -2rem;
+}
+
+@media screen and (min-width:1024px) {
+  .sensors__items{
+    grid-template-columns: repeat(6,minmax(100px,150px));
+  }
+  .sensors__item p{
+    font-size: 2rem;
+    margin-top: -1.5rem;
   }
 }
