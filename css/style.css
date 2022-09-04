@@ -233,3 +233,170 @@ h2 {
     margin-bottom: 3.5rem;
   }
 }
+
+/* Navbar */
+.main-header{
+  background-color: pink;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.2rem 2rem;
+}
+
+.nav__logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.nav.nav__expanded .nav__list{
+  max-height: 100vh;
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+.nav__list .nav__item{
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.nav__list .nav__item:not(:last-child){
+  border-bottom: 1px solid var(--color-white);
+}
+
+.nav__list .nav__item a{
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-white);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+
+.nav__list .nav__item a:hover{
+  transform: translateX(-5px);
+}
+
+.nav__item.cta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.nav__item.cta .btn{
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+.nav__item.cta .btn--dashboard{
+  color: var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+}
+
+.nav__item.cta .btn--download{
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  background-color: transparent;
+}
+
+.nav__buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__buttons .btn{
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  border-radius: 8px;
+  margin-left: 1rem;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav__buttons .btn:hover{
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.07);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__buttons{
+    display: none;
+  }
+  .nav__list{
+    width: auto;
+    max-height: 100%;
+    opacity: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__list .nav__item{
+    margin-bottom: 0;
+    margin-left: 2.5rem;
+  }
+  .nav__list .nav__item:not(:last-child){
+    border-bottom: 0;
+  }
+  .nav__item.cta{
+    flex-direction: row;
+    padding-top: 0;
+  }
+  .nav__item.cta .btn{
+    margin-left: 1rem;
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+/* Toggler */
+.nav__toggler{
+  cursor: pointer;
+  background-color: var(--color-white);
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+}
+
+.nav__toggler .bar{
+  width: 20px;
+  height: 3px;
+  margin: 3px 0;
+  border-radius: 10px;
+  background-color: var(--color-primary-dark);
+  transition: all 0.4s ease-out;
+}
+
+.nav.nav__expanded .bar-one{
+  transform: rotate(-45deg) translate(-3px,3px);
+}
+
+.nav.nav__expanded .bar-two{
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.nav.nav__expanded .bar-three{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
