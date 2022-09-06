@@ -499,7 +499,7 @@ h2 {
 }
 
 .nav.nav__expanded .bar-one {
-  transform: rotate(-45deg) translate(-3px, 3px);
+  transform: rotate(-45deg) translate(-5px, 4px);
 }
 
 .nav.nav__expanded .bar-two {
@@ -508,7 +508,7 @@ h2 {
 }
 
 .nav.nav__expanded .bar-three {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-4px, -4px);
 }
 
 /* Footer */
