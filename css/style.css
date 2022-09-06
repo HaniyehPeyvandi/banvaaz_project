@@ -71,6 +71,10 @@ h2 {
   }
 }
 
+.bg-wrapper{
+  background: linear-gradient(243.02deg, #10A9DA -9.92%, #92E5FF 106.28%);
+}
+
 /* Buttons */
 .btn {
   cursor: pointer;
@@ -93,6 +97,7 @@ h2 {
 
 /* Sensors */
 .sensors__items {
+  padding: 4rem 0 6rem;
   display: grid;
   gap: 2rem 0;
   grid-template-columns: repeat(3, minmax(90px, 150px));
@@ -109,6 +114,7 @@ h2 {
 
 .sensors__item p {
   font-weight: bold;
+  color: var(--color-white);
   font-size: 1.5rem;
   margin-top: -2rem;
 }
@@ -124,10 +130,6 @@ h2 {
 }
 
 /* Features */
-.info {
-  background: #f6f6f6;
-}
-
 .features {
   background-color: #7edcf9;
 }
@@ -234,15 +236,119 @@ h2 {
   }
 }
 
+/* Info-device */
+.info-device .info-wrapper{
+  padding: 2rem 0;
+  flex-direction: column;
+}
+
+.info-device .info__img{
+  width: 50%;
+}
+
+.info-device .info__img img {
+  width: 100%;
+}
+
+.info-device .info__detail {
+  width: 65%;
+  text-align: center;
+  padding-right: 0;
+}
+
+.info-device .info__detail h2 {
+  margin: 1.5rem 0;
+  color: var(--color-white);
+}
+
+.info-device .info__detail p {
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width:1024px) {
+  .info-device .info__img{
+    order: 2;
+  }
+  .info-device .info__detail h2 {
+    margin: 3rem 0;
+  }
+  .info-device .info__detail p {
+    margin-bottom: 5rem;
+  }
+}
+
+/* Info-child */
+.info-child{
+  background-color: #f6f6f6;
+}
+
+/* Info-partners */
+.info-partners .info-wrapper{
+  flex-direction: column;
+}
+
+.info-partners .info__detail{
+  width: auto;
+  align-self: flex-start;
+}
+
+.info-partners .info__img{
+  order: 1;
+}
+
+@media screen and (min-width:1024px) {
+  .info-partners .info-wrapper{
+    flex-direction: row;
+  }
+  .info-partners .info__detail{
+    width: 50%;
+    align-self: center;
+  }
+  .info-partners .info__img img {
+    width: 70%;
+  }
+}
+
+/* Info-remote */
+.info-remote .info__img img{
+  width: auto;
+  height: 320px;
+}
+
+.info-remote .info__detail .btn{
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+  background-color: transparent;
+}
+
+@media screen and (max-width: 550px) {
+  .info-remote .info__img img{
+    width: auto;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .info-remote .info__img img{
+    width: auto;
+    height: 450px;
+  }
+}
+
 /* Navbar */
 .main-header {
-  background-color: pink;
   position: fixed;
+  background-color: transparent;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
 }
+
+.main-header.scroll{
+  background-color: var(--color-secondary-light);
+} 
 
 .nav {
   display: flex;
@@ -267,6 +373,10 @@ h2 {
   opacity: 0;
   overflow: hidden;
   transition: all 0.4s ease-out;
+}
+
+.nav.nav__expanded{
+  background-color: var(--color-secondary-light);
 }
 
 .nav.nav__expanded .nav__list {
@@ -341,7 +451,7 @@ h2 {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.07);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) { 
   .nav__buttons {
     display: none;
   }
@@ -516,7 +626,7 @@ h2 {
 
 /* Hero section */
 .hero{
-  background-color: var(--color-primary-light);
+  padding-top: 10rem;
 }
 
 .hero-wrapper{
